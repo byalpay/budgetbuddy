@@ -1,5 +1,8 @@
-import 'package:budgetbuddy/widgets/bottomNavigationBar.dart';
+import 'package:budgetbuddy/widgets/loginButton.dart';
 import 'package:flutter/material.dart';
+import 'package:budgetbuddy/widgets/textField.dart';
+import 'mainpage.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -31,16 +34,59 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: NavbarApp(), // NavbarApp widget'i HomePage içindeki Center widget'ine yerleştirildi.
+      backgroundColor: Colors.grey[300],
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+                "Hoşgeldiniz",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            SizedBox(height: 30),
+            LoginTextField(
+                hintText: 'Kullanıcı Adı',
+                obscureText: false
+            ),
+            SizedBox(height: 10),
+            LoginTextField(
+                hintText: "Şifre",
+                obscureText: true
+            ),
+            SizedBox(height: 30),
+            LoginButton(),
+            Row(
+              children: [
+                Expanded(child: Divider(
+                  thickness: 0.5,
+                  color : Colors.grey,
+                ),
+                ),
+                Text(
+                    "Ya da Google ile Devam Et",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                Expanded(
+                    child:
+                    Divider(
+                  thickness: 0.5,
+                  color: Colors.grey,
+                ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
 }
-
