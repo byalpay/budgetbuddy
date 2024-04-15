@@ -24,7 +24,6 @@ class LoginTextField extends StatelessWidget {
               borderRadius: BorderRadius.circular(20.0),
               borderSide: BorderSide(color: Colors.grey.shade400),
             ),
-            fillColor: Colors.grey.shade200,
             filled: true,
           ),
         ),

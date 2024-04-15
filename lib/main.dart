@@ -1,7 +1,8 @@
+import 'package:budgetbuddy/service/themeSwitch.dart';
+import 'package:budgetbuddy/theme/theme.dart';
 import 'package:budgetbuddy/widgets/loginButton.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/widgets/textField.dart';
-import 'mainpage.dart';
 
 
 void main() {
@@ -9,16 +10,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: darkModeEnabled ? darkTheme : lightTheme,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
       debugShowCheckedModeBanner: false,
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -37,9 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.grey[300],
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../mainpage.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({Key? key}) : super(key: key);
+  const LoginButton({super.key});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class LoginButton extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const MainPage()),
+            MaterialPageRoute(builder: (context) => MainPage()),
           );
         },
         style: ElevatedButton.styleFrom(
