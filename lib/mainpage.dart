@@ -1,11 +1,9 @@
-import 'package:budgetbuddy/theme/dark_theme.dart';
-import 'package:budgetbuddy/theme/light_theme.dart';
+import 'package:budgetbuddy/theme/theme.dart';
 import 'package:budgetbuddy/widgets/customAppBar.dart';
 import 'package:budgetbuddy/widgets/bottomNavigationBar.dart';
 import 'package:budgetbuddy/widgets/customDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/service/themeSwitch.dart';
-
 
 class MainPage extends StatelessWidget {
    const MainPage({super.key});
