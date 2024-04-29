@@ -3,6 +3,10 @@ import 'package:budgetbuddy/theme/theme.dart';
 import 'package:budgetbuddy/widgets/loginButton.dart';
 import 'package:flutter/material.dart';
 import 'package:budgetbuddy/widgets/textField.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'language/l10n.dart';
 
 
 void main() {
@@ -15,17 +19,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       theme: darkModeEnabled ? darkTheme : lightTheme,
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -35,13 +40,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-                "Hoşgeldiniz",
+              AppLocalizations.of(context)!.helloWorld,
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
@@ -49,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             SizedBox(height: 30),
             LoginTextField(
-                hintText: 'Kullanıcı Adı',
+                hintText: "Kullanıcı Adı",
                 obscureText: false
             ),
             SizedBox(height: 10),
