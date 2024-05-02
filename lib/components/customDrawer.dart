@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../cards.dart';
-import '../emailSender.dart';
-import '../mainpage.dart';
-import '../settings.dart';
+import '../view/home/main-page/view/cardsPage.dart';
+import '../view/home/email-sender/emailSender.dart';
+import '../view/home/main-page/view/mainPage.dart';
+import '../view/settings/view/settings.dart';
 
 
 class CustomDrawer extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:budgetbuddy/view/home/main-page/view/receiptPage.dart';
+import 'package:budgetbuddy/view/receipt/view/receiptPage.dart';
 import 'package:flutter/material.dart';
 import '../view/home/main-page/view/financePage.dart';
 import '../view/home/main-page/view/mainPage.dart';

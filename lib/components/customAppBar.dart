@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
-  final String title;
+  String title;
 
-  CustomAppBar({Key? key, required this.title})
-      : preferredSize = Size.fromHeight(kToolbarHeight),
-        super(key: key);
+  CustomAppBar({Key? key, required this.title}): preferredSize = Size.fromHeight(kToolbarHeight), super(key: key);
 
   @override
   final Size preferredSize; // default is 56.0
