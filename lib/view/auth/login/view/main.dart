@@ -1,12 +1,11 @@
-import 'package:budgetbuddy/service/themeSwitch.dart';
 import 'package:budgetbuddy/theme/theme.dart';
-import 'package:budgetbuddy/widgets/loginButton.dart';
+import 'package:budgetbuddy/components/loginButton.dart';
 import 'package:flutter/material.dart';
-import 'package:budgetbuddy/widgets/textField.dart';
+import 'package:budgetbuddy/components/customLoginField.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'language/l10n.dart';
+import 'package:budgetbuddy/language/l10n.dart';
+import '../../../settings/service/themeSwitch.dart';
 
 
 void main() {
@@ -66,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
             LoginButton(),
             Row(
               children: [
-                Expanded(child: Divider(
+                Expanded(
+                  child: Divider(
                   thickness: 0.5,
                   color : Colors.grey,
                 ),

@@ -1,11 +1,11 @@
-import 'package:budgetbuddy/service/themeSwitch.dart';
 import 'package:budgetbuddy/theme/theme.dart';
-import 'package:budgetbuddy/widgets/customAppBar.dart';
-import 'package:budgetbuddy/widgets/customDrawer.dart';
+import 'package:budgetbuddy/components/customAppBar.dart';
+import 'package:budgetbuddy/components/customDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'language/l10n.dart';
+import '../../../language/l10n.dart';
+import '../service/themeSwitch.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
