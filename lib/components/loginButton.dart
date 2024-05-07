@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../mainPage.dart';
+import '../view/home/main-page/view/mainPage.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({super.key});
