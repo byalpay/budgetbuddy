@@ -1,4 +1,4 @@
-import 'package:budgetbuddy/view/receipt/view/receiptPage.dart';
+import 'package:budgetbuddy/view/receipt/view/receiptsPage.dart';
 import 'package:flutter/material.dart';
 import '../view/home/main-page/view/financePage.dart';
 import '../view/home/main-page/view/mainPage.dart';
@@ -22,7 +22,7 @@ class _BottomNavBarState extends State<CustomNavbar> {
     } else if (index == 1) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MainPage()));
     } else if (index == 2) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiptPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiptsPage()));
     }
   }
 
