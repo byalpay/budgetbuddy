@@ -1,14 +1,14 @@
-import 'package:budgetbuddy/components/customFormDialog.dart';
+import 'package:budgetbuddy/components/customReceiptDialog.dart';
 import 'package:budgetbuddy/theme/theme.dart';
 import 'package:flutter/material.dart';
 import '../view/settings/service/themeSwitch.dart';
 
-class CustomFAB extends StatelessWidget {
+class CustomReceiptFAB extends StatelessWidget {
   final IconData icon;
   final Function onPressed;
   final String tooltip;
 
-  CustomFAB({
+  CustomReceiptFAB({
     required this.icon,
     required this.onPressed,
     this.tooltip = '',
@@ -20,8 +20,7 @@ class CustomFAB extends StatelessWidget {
       onPressed: () => showDialog(
         context: context,
         builder: (BuildContext context) {
-          TextEditingController _controller = TextEditingController();
-          return CustomFormDialog();
+          return CustomReceiptDialog();
         },
       ),
       tooltip: tooltip,
