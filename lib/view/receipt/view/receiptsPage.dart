@@ -1,12 +1,10 @@
-import 'package:budgetbuddy/components/customReceiptCard.dart';
-import 'package:budgetbuddy/components/customReceiptFAB.dart';
-import 'package:budgetbuddy/components/customNavBar.dart';
-import 'package:budgetbuddy/components/customAppBar.dart';
-import 'package:budgetbuddy/components/customDrawer.dart';
-import 'package:budgetbuddy/components/customReceiptDialog.dart';
 import 'package:flutter/material.dart';
 
-import '../../home/main-page/view/mainPage.dart';
+import '../../../components/customAppBar.dart';
+import '../../../components/customDrawer.dart';
+import '../../../components/customNavBar.dart';
+import '../../../components/customReceiptCard.dart';
+import '../../../components/customReceiptFAB.dart';
 
 class ReceiptsPage extends StatefulWidget {
   const ReceiptsPage({super.key});

@@ -1,5 +1,6 @@
-import 'package:budgetbuddy/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../../../theme/theme.dart';
 
 bool darkModeEnabled = true;
 

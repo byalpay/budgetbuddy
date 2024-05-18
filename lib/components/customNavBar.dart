@@ -1,7 +1,7 @@
-import 'package:budgetbuddy/view/receipt/view/receiptsPage.dart';
 import 'package:flutter/material.dart';
 import '../view/home/main-page/view/financePage.dart';
-import '../view/home/main-page/view/mainPage.dart';
+import '../view/home/main-page/view/homePage.dart';
+import '../view/receipt/view/receiptsPage.dart';
 
 class CustomNavbar extends StatefulWidget {
   const CustomNavbar({super.key});
@@ -20,7 +20,7 @@ class _BottomNavBarState extends State<CustomNavbar> {
     if (index == 0) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => FinancePage()));
     } else if (index == 1) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => MainPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
     } else if (index == 2) {
       Navigator.push(context, MaterialPageRoute(builder: (context) => ReceiptsPage()));
     }
