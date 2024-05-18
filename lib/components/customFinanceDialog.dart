@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 
 import 'customField.dart';
 
-class CustomReceiptDialog extends StatefulWidget {
-  const CustomReceiptDialog({super.key});
+class CustomFinanceDialog extends StatefulWidget {
+  const CustomFinanceDialog({super.key});
 
   @override
-  State<CustomReceiptDialog> createState() => _CustomReceiptDialogState();
+  State<CustomFinanceDialog> createState() => _CustomFinanceDialogState();
 }
 
-var receiptName;
-var amount;
-var dueDate;
-var status;
+  var receiptName;
+  var amount;
+  var dueDate;
+  var status;
 
 TextEditingController receiptNameController = TextEditingController();
 TextEditingController amountController = TextEditingController();
 TextEditingController dueDateController = TextEditingController();
 
-class _CustomReceiptDialogState extends State<CustomReceiptDialog> {
+class _CustomFinanceDialogState extends State<CustomFinanceDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text("Fatura Kaydı"),
+      title: Text("Gelir-Gider Kaydı"),
       content: Column(
         mainAxisSize: MainAxisSize.min, // Dialog içinde minimum yükseklik
         children: [

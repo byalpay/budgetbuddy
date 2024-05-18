@@ -1,8 +1,10 @@
+import 'package:budgetbuddy/controllers/mainPage.dart';
+import 'package:budgetbuddy/view/auth/login/view/loginPage.dart';
+import 'package:budgetbuddy/view/home/email-sender/emailSender.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
-import '../view/home/main-page/view/cardsPage.dart';
-import '../view/home/email-sender/emailSender.dart';
-import '../view/home/main-page/view/mainPage.dart';
+import '../view/home/main-page/view/creditCardsPage.dart';
+import '../view/home/main-page/view/homePage.dart';
 import '../view/settings/view/settings.dart';
 
 
@@ -32,7 +34,7 @@ class _MyWidgetState extends State<CustomDrawer> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>  MainPage(),
+                  builder: (context) =>  HomePage(),
                 ),
               );
             },
@@ -70,21 +72,28 @@ class _MyWidgetState extends State<CustomDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const EmailSender()),
+                MaterialPageRoute(
+                  builder: (context) => EmailSender(),
+                ),
               );
-            },
+              },
           ),
-          ListTile(
+          /* ListTile(
             leading: Icon(Icons.update),
             title: const Text('Güncellemeler'),
             onTap: () {},
-          ),
-
+          ),*/
           SizedBox(height: 250),
           ListTile(
             leading: Icon(Icons.logout),
             title: const Text('Çıkış'),
-            onTap: () {},
+            onTap: (){
+              FirebaseAuth.instance.signOut();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context)=>const MainPage()),
+              );
+            },
           ),
         ],
       ),

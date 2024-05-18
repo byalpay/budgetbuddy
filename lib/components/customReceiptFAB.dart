@@ -1,7 +1,5 @@
-import 'package:budgetbuddy/components/customReceiptDialog.dart';
-import 'package:budgetbuddy/theme/theme.dart';
 import 'package:flutter/material.dart';
-import '../view/settings/service/themeSwitch.dart';
+import 'customReceiptDialog.dart';
 
 class CustomReceiptFAB extends StatelessWidget {
   final IconData icon;
